@@ -6,6 +6,7 @@
 
         <button
                 (click)="toggleAllTodos()"
+                *ngIf="uncheckedTodos.length"
                 class="px-4 py-2 rounded-lg text-sm font-semibold text-white bg-sky-400 hover:bg-sky-500"
         >
             Check all

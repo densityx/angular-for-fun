@@ -44,6 +44,8 @@ export class TodoListComponent {
     }
 
     addNewTodo() {
+        if (this.name == '') return;
+        
         this.todos.push({
             name: this.name,
             checked: false,

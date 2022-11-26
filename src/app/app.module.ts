@@ -13,6 +13,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {ShippingComponent} from './shipping/shipping.component';
 import {AboutComponent} from "./about/about.component";
 import {TodoListComponent} from './todo-list/todo-list.component';
+import {AlertsComponent} from './alerts/alerts.component';
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 
 @NgModule({
     imports: [
@@ -26,6 +29,7 @@ import {TodoListComponent} from './todo-list/todo-list.component';
             {path: 'shipping', component: ShippingComponent},
             {path: 'about', component: AboutComponent},
             {path: 'todo', component: TodoListComponent},
+            {path: 'alerts', component: AlertsComponent},
         ]),
         FormsModule
     ],
@@ -38,7 +42,10 @@ import {TodoListComponent} from './todo-list/todo-list.component';
         CartComponent,
         ShippingComponent,
         AboutComponent,
-        TodoListComponent
+        TodoListComponent,
+        AlertsComponent,
+        SuccessAlertComponent,
+        WarningAlertComponent
     ],
     bootstrap: [
         AppComponent
