@@ -1,0 +1,77 @@
+<div class="max-w-lg mx-auto">
+    <div class="flex items-center justify-between mt-4">
+        <h2 class="title mt-4">
+            All Todos
+        </h2>
+
+        <button
+                (click)="toggleAllTodos()"
+                class="px-4 py-2 rounded-lg text-sm font-semibold text-white bg-sky-400 hover:bg-sky-500"
+        >
+            Check all
+        </button>
+    </div>
+
+    <div
+            *ngIf="uncheckedTodos.length"
+            class="flex flex-col mt-4 space-y-4"
+    >
+        <div
+                (click)="toggleTodo(todo)"
+                *ngFor="let todo of uncheckedTodos"
+                class="flex items-center p-4 w-full bg-sky-100 hover:bg-sky-200 rounded-xl"
+        >
+            <input [checked]="todo.checked" type="checkbox">
+
+            <h3 class="ml-4 text-lg text-zinc-800">
+                {{ todo.name }}
+            </h3>
+        </div>
+    </div>
+
+    <div *ngIf="! uncheckedTodos.length" class="text-center text-zinc-800 p-4 rounded-lg bg-zinc-50">
+        No available todos
+    </div>
+
+    <div
+            *ngIf="name.length"
+            class="flex items-center mt-4 p-4 w-full bg-sky-100 hover:bg-sky-200 rounded-xl"
+    >
+        <input disabled type="checkbox">
+
+        <h3 class="ml-4 text-lg text-zinc-800">
+            {{ name }}
+        </h3>
+    </div>
+
+    <input
+            (focusout)="addNewTodo()"
+            (keyup.enter)="addNewTodo()"
+            [(ngModel)]="name"
+            class="mt-4 w-full"
+            placeholder="New todo"
+            type="text"
+    >
+
+    <h2 class="title mt-4">
+        Done Todos
+    </h2>
+
+    <div *ngIf="checkedTodos.length" class="flex flex-col mt-4 space-y-4">
+        <div
+                (click)="toggleTodo(todo)"
+                *ngFor="let todo of checkedTodos"
+                class="flex items-center p-4 w-full bg-sky-100 hover:bg-sky-200 rounded-xl"
+        >
+            <input [checked]="todo.checked" type="checkbox">
+
+            <h3 class="ml-4 text-lg text-zinc-800">
+                <del>{{ todo.name }}</del>
+            </h3>
+        </div>
+    </div>
+
+    <div *ngIf="! checkedTodos.length" class="text-center text-zinc-800 p-4 rounded-lg bg-zinc-50">
+        No checked todos
+    </div>
+</div>
