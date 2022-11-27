@@ -14,8 +14,9 @@ import {ShippingComponent} from './shipping/shipping.component';
 import {AboutComponent} from "./about/about.component";
 import {TodoListComponent} from './todo-list/todo-list.component';
 import {AlertsComponent} from './alerts/alerts.component';
-import { SuccessAlertComponent } from './success-alert/success-alert.component';
-import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import {SuccessAlertComponent} from './success-alert/success-alert.component';
+import {WarningAlertComponent} from './warning-alert/warning-alert.component';
+import {ServerComponent} from './server/server.component';
 
 @NgModule({
     imports: [
@@ -30,6 +31,7 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
             {path: 'about', component: AboutComponent},
             {path: 'todo', component: TodoListComponent},
             {path: 'alerts', component: AlertsComponent},
+            {path: 'server', component: ServerComponent},
         ]),
         FormsModule
     ],
@@ -45,7 +47,8 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
         TodoListComponent,
         AlertsComponent,
         SuccessAlertComponent,
-        WarningAlertComponent
+        WarningAlertComponent,
+        ServerComponent
     ],
     bootstrap: [
         AppComponent
