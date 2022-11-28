@@ -1,2 +1,21 @@
-<app-warning-alert></app-warning-alert>
-<app-success-alert></app-success-alert>
+<app-alert-box
+        (alertClicked)="receiveBoxClicked($event)"
+        *ngFor="let alert of alerts" [alert]="alert"
+>
+    <h2 class="title">Alert title here</h2>
+</app-alert-box>
+
+<div class="mt-4">
+    <input #message class="w-full" type="text">
+
+    <div class="mt-4">
+        <button
+                (click)="revealMessage(message)"
+                class="px-4 py-2 rounded-lg text-sm font-semibold text-white bg-red-400 hover:bg-red-500"
+        >
+            Reveal
+        </button>
+
+        <p>{{ message }}</p>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<ng-content></ng-content>
+
+<div (click)="emitBoxClick()" [ngClass]="['mt-4 p-4 rounded-xl font-semibold text-white', alert?.className]">
+    <p>{{alert?.message}}</p>
+</div>

@@ -14,8 +14,6 @@ import {ShippingComponent} from './shipping/shipping.component';
 import {AboutComponent} from "./about/about.component";
 import {TodoListComponent} from './todo-list/todo-list.component';
 import {AlertsComponent} from './alerts/alerts.component';
-import {SuccessAlertComponent} from './success-alert/success-alert.component';
-import {WarningAlertComponent} from './warning-alert/warning-alert.component';
 import {ServerComponent} from './server/server.component';
 import {ShoppingComponent} from './shopping/shopping.component';
 import {RecipeBookComponent} from './recipe-book/recipe-book.component';
@@ -24,6 +22,7 @@ import {RecipeDetailComponent} from './recipe-book/recipe-detail/recipe-detail.c
 import {RecipeItemComponent} from './recipe-book/recipe-item/recipe-item.component';
 import {ShoppingEditComponent} from './shopping/shopping-edit/shopping-edit.component';
 import {ShoppingAndRecipeComponent} from './shopping-and-recipe/shopping-and-recipe.component';
+import {BoxComponent} from "./alerts/box/box.component";
 
 @NgModule({
     imports: [
@@ -54,8 +53,6 @@ import {ShoppingAndRecipeComponent} from './shopping-and-recipe/shopping-and-rec
         AboutComponent,
         TodoListComponent,
         AlertsComponent,
-        SuccessAlertComponent,
-        WarningAlertComponent,
         ServerComponent,
         ShoppingComponent,
         RecipeBookComponent,
@@ -63,7 +60,8 @@ import {ShoppingAndRecipeComponent} from './shopping-and-recipe/shopping-and-rec
         RecipeDetailComponent,
         RecipeItemComponent,
         ShoppingEditComponent,
-        ShoppingAndRecipeComponent
+        ShoppingAndRecipeComponent,
+        BoxComponent,
     ],
     bootstrap: [
         AppComponent
