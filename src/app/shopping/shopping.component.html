@@ -1,0 +1,12 @@
+<app-shopping-edit></app-shopping-edit>
+
+<div *ngFor="let ingredient of ingredients"
+     class="flex justify-between items-center mt-4 p-3 rounded-xl shadow bg-orange-50">
+    <h3 class="text-lg text-medium text-gray-800">
+        {{ ingredient.name }}
+    </h3>
+
+    <span class="bg-orange-400 text-white px-3 py-1 rounded-xl">
+        {{ ingredient.amount }}
+    </span>
+</div>
